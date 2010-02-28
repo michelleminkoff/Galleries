@@ -1,0 +1,134 @@
+ 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+	<html lang="en">
+	<head>
+	    <title>Chicago Art Gallery Persistence</title>
+	</head>
+	 	<h1 style="text-align:center">Tracing the Persistence of Chicago Art Galleries</h1>
+	<div style="margin-left: 10%; margin-right:80px"><p>They sold everything from paintings and sculptures to furniture and kaleidoscopes.  Attracting art conniseurs from around the world, the 80s were a heyday for Chicago art galleries.  As of 1990, there were 96 listed by the <a href="http://caconline.org/">Chicago Artists' Coalition</a> as a resource for artists to pursue the sale of their work.</p>
+
+<p>If you ask local gallery owners in 2010 what they think the state of the industry is, most will tell you it's not doing well, much like the rest of the economy within and without the arts world.  Some in the community say Chicago provides a climate that's better than the norm, while others lament that the city just couldn't support the type of art they wanted to pursue. I followed up with all of the galleries that were listed in 1990, to find out what happened to them.  They say a gallery's success depends on its location and its specialties.
+
+<p>Search the database to find out the fate of the 96 galleries listed in 1990.  (An accompanying text story and data visualization are forthcoming as well.) </p>
+		
+		<div style="background-color:#C0C0C0; padding:15px; width:500px";><p><strong>Search the Chicago Art Gallery Persistence Database.</strong></p>
+			<form method='post' action='search_name/'>	<label for="name"><strong>Gallery name:</strong></label>
+
+					<input type='text' name='name'>
+					<input type='submit' value="Search by name" name='search'></form><br>
+
+<form method='post' action='search_founded/'>		<label for="founded_between"><strong>Gallery founded between:</strong></label>
+
+			<input type='text' size='4' name='founded_1' value='1940'> and <input type='text' size='4' name='founded_2' value='1990'>
+			<input type='submit' value="Search by founding date" name='search'></form>
+
+<br>
+
+		<form method='post' action='search_closed/'><label for="closed_between"><strong>Gallery closed between:</strong></label>
+
+		<input type='text' size='4' name='closed_1' value='1990'> and <input type='text' size='4' name='closed_2' value='2010'>
+		<input type='submit' value="Search by closing date" name='search'></form><br>
+		
+
+
+		<form method='post' action='search_neighborhood/'>	<label for="neighborhood"><strong>Neighborhood, in 1990:</strong></label>
+
+		<select name="neighborhood">
+		<option value="">None selected</option>
+		<option value="loop">Loop</option>
+		<option value="north">North</option>
+		<option value="northwest">Northwest</option>
+		<option value="river north">River North</option>
+		<option value="south">South</option>
+		<option value="west">West</option>
+		</select><input type='submit' value="Search by neighborhood" name='search'></form><br>
+		
+
+		<form method='post' action='search_zipcode/'><label for="zipcode"><strong>Zipcode, in 1990:</strong></label>
+
+		<select name="zipcode">
+		<option value="">None selected</option>
+		<option value="60604">60604</option>
+		<option value="60605">60605</option>
+		<option value="60607">60607</option>
+		<option value="60608">60608</option>
+		<option value="60610">60610</option>
+		<option value="60611">60611</option>
+		<option value="60613">60613</option>
+		<option value="60614">60614</option>
+		<option value="60615">60615</option>
+		<option value="60622">60622</option>
+		<option value="60632">60632</option>
+		<option value="60640">60640</option>
+		<option value="60646">60646</option>
+		<option value="60647">60647</option>
+		<option value="60657">60657</option>
+
+		</select>
+		<input type='submit' value='Search by zipcode' name='search1'></form><br>
+
+		<form method='post' action='search_outcome/'><label for="outcome"><strong>Gallery's outcome, as of 2010:</strong></label>
+
+		<select name="outcome">
+		<option value="">None selected</option>
+		<option value="closed">Closed</option>
+		<option value="moved in Chicago">Moved in Chicago</option>
+		<option value="moved out of Chicago">Moved out of Chicago</option>
+		<option value="same location">Same location</option>
+		</select>
+		<input type='submit' value='Search by outcome' name='search'></form><br>
+
+
+		<form method='post' action='search_media/'><label for="media"><strong>In 1990, gallery focused on art in these categories:</strong><br>(Hold down command key (Mac) or Control (Win) while clicking <br>to select more than one option.)</label><br><br>
+
+		<SELECT NAME="media" multiple="multiple" SIZE=10>
+			<OPTION VALUE="3-D construction">3-D construction
+			<OPTION VALUE="accessories">Accessories
+			<OPTION VALUE="all">All
+			<OPTION VALUE="assemblage">Assemblage
+			<OPTION VALUE="basketry">Basketry
+			<OPTION VALUE="batik">Batik
+			<OPTION VALUE="books">Books
+			<OPTION VALUE="cards">Cards
+			<OPTION VALUE="ceramics">Ceramics
+			<OPTION VALUE="clay">Clay
+			<OPTION VALUE="collage">Collage
+			<OPTION VALUE="drawing">Drawing
+			<OPTION VALUE="enamel">Enamel
+			<OPTION VALUE="etching">Etching
+			<OPTION VALUE="fiber">Fiber
+			<OPTION VALUE="folk art">Folk Art
+			<OPTION VALUE="fresco">Fresco
+			<OPTION VALUE="furniture">Furniture
+			<OPTION VALUE="glass">Glass
+			<OPTION VALUE="graphics">Graphics
+			<OPTION VALUE="handcrafts">Handcrafts
+			<OPTION VALUE="jewelry">Jewelry
+			<OPTION VALUE="kaleidoscopes">Kaleidoscopes
+			<OPTION VALUE="leather">Leather
+			<OPTION VALUE="lithography">Lithography
+			<OPTION VALUE="metal">Metal
+			<OPTION VALUE="mixed media">Mixed Media
+			<OPTION VALUE="mobiles">Mobiles
+			<OPTION VALUE="monoprints">Monoprints
+			<OPTION VALUE="neon">Neon
+			<OPTION VALUE="painting">Painting
+			<OPTION VALUE="paper">Paper
+			<OPTION VALUE="pastels">Pastels
+			<OPTION VALUE="photography">Photography
+			<OPTION VALUE="porcelain">Porcelain
+			<OPTION VALUE="pottery">Pottery
+			<OPTION VALUE="prints">Prints
+			<OPTION VALUE="sculpture">Sculpture
+			<OPTION VALUE="serigraphy">Serigraphy
+			<OPTION VALUE="silkscreen">Silkscreen
+			<OPTION VALUE="tapestry">Tapestry
+			<OPTION VALUE="wearables">Wearables
+			<OPTION VALUE="weaving">Weaving
+			<OPTION VALUE="wood">Wood
+            </SELECT>
+		<input type='submit' value="Search by category"name='search'></form></div></div>
+		
+			<div style="margin-left: 10%; margin-right:80px; margin-top:70px">	<p>This site is the work of <a href="http://www.michelleminkoff.com">Michelle Minkoff</a>, a graduate student at the <a href="http://www.medill.northwestern.edu">Medill School of Journalism</a> at <a href="http://www.northwestern.edu">Northwestern University.</a>  If you have questions or comments, please <a href="mailto:meminkoff@gmail.com">email me</a>.</p>
+				<p>Data stored in this database may be downloaded in CSV format <a href="http://www.michelleminkoff.com/data/galleries1990.csv">here</a>.
+		</div>
+	</div>

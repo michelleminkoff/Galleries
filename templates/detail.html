@@ -1,0 +1,157 @@
+<html>
+<head>
+	  
+	<title> Chicago Art Gallery Persistence: {{galleries1990.name}}</title>
+
+  </head>
+
+	<body onload="load()" onunload="GUnload()"><div style="margin-top:70px; margin-left:180px;"><p><a href="http://minkoffcodingadventures.com/galleries/">Back to main page </a></div>
+	
+	<div style="margin-left:180px;margin-top:0px; width:50%; float:left"><p style="font-size:32"><strong>{{galleries1990.name}}</a></strong> </p>
+<p style="font-size:18">In 1990, it was located at {{galleries1990.address_number}}  {{galleries1990.address_direction}}.  {{galleries1990.address_street}} {{galleries1990.address_type}}., and  owned by {{galleries1990.director}}.</p> 
+<p style="font-size:18">{{galleries1990.name}} was founded in {{galleries1990.start_year}} and remained open until {{galleries1990.end_year}}.  It specialized in these categories:
+
+	{% ifnotequal galleries1990.painting "n" %}
+	{{galleries1990.painting}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.sculpture "n" %}
+	{{galleries1990.sculpture}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.three_d_construction "n" %}
+	{{galleries1990.three_d_construction}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.pastels "n" %}
+	{{galleries1990.pastels}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.furniture "n" %}
+	{{galleries1990.furniture}},
+	{% endifnotequal %}
+		
+	{% ifnotequal galleries1990.folk_art "n" %}
+	{{galleries1990.folk_art}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.graphics "n" %}
+	{{galleries1990.graphics}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.fiber "n" %}
+	{{galleries1990.fiber}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.handcrafts "n" %}
+	{{galleries1990.handcrafts}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.mixed_media "n" %}
+	{{galleries1990.mixed_media}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.all "n" %}
+	{{galleries1990.all}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.tapestry "n" %}
+	{{galleries1990.tapestry}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.clay "n" %}
+	{{galleries1990.clay.strip}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.wood "n" %}
+	{{galleries1990.wood}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.kaleidoscopes "n" %}
+	{{galleries1990.kaleidoscopes}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.silkscreen "n" %}
+	{{galleries1990.silkscreen}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.mobiles "n" %}
+	{{galleries1990.mobiles}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.assemblage "n" %}
+	{{galleries1990.assemblage}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.neon "n" %}
+	{{galleries1990.neon}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.collage "n" %}
+	{{galleries1990.collage}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.enamel "n" %}
+	{{galleries1990.enamel}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.porcelain "n" %}
+	{{galleries1990.porcelain}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.books "n" %}
+	{{galleries1990.books}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.fresco "n" %}
+	{{galleries1990.fresco}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.pottery "n" %}
+	{{galleries1990.pottery}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.weaving "n" %}
+	{{galleries1990.weaving}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.collage "n" %}
+	{{galleries1990.collage}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.basketry "n" %}
+	{{galleries1990.basketry}},
+	{% endifnotequal %}
+
+	{% ifnotequal galleries1990.leather "n" %}
+	{{galleries1990.leather}},
+	{% endifnotequal %}
+	
+	{% ifnotequal galleries1990.outcome "closed" %}
+<br><br>The gallery has {{galleries1990.outcome}} since its inception. 
+{% endifnotequal %}
+
+
+
+</p> {% if galleries1990.notes %}
+
+<p style="font-size:18">Additional notes:
+	<ul>
+		<li>{{galleries1990.notes}}</li>
+		</ul>
+		</p>
+		</body>
+		</html>
+		
+		{% else %}
+		{% endif %}</div>
+		
+	
+	<div style="margin-left: 65%; margin-top:42px;">	<img src= "http://maps.google.com/maps/api/staticmap?center={{galleries1990.lat}},{{galleries1990.lan}}&zoom=15&size=400x400&
+		markers=color:red|{{galleries1990.lat}}, {{galleries1990.lan}}&sensor=true" /><br><br><small>Location of gallery in 1990.</small>
+
+</body>
+	</html>
+	
+		
+	
