@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Chicago Art Gallery Persistence: Names that match "{{name}}"{% endblock %}
 
-	<body><div style="margin-top:70px; margin-left:180px;"><p><a href="http://minkoffcodingadventures.com/galleries/">Back to main page </a></div>
+	<body><div style="margin-top:70px; margin-left:180px;"><p><a href="/galleries/">Back to main page </a></div>
 
 <div style="margin-top:40px; margin-left:180px;"><h2>Galleries whose names match ""{{name}}""</h2>
 
@@ -13,7 +13,7 @@
     {% endfor %}
     </ol>
  
-    <p>Search again or <a href="http://minkoffcodingadventures.com/galleries/">return to the main page</a>.</p>
+    <p>Search again or <a href="/galleries/">return to the main page</a>.</p>
 	<form method='post' action='search_name/'>	<label for="name"><strong>Gallery name:</strong></label>
 
 			<input type='text' name='name'>

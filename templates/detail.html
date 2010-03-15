@@ -1,14 +1,12 @@
-<html>
-<head>
-	  
-	<title> Chicago Art Gallery Persistence: {{galleries1990.name}}</title>
+{% extends "base.html" %}
+{% block title %}Chicago Art Gallery Persistence:{{galleries1990.name}} {% endblock %}
 
-  </head>
+{% block bodytag %}<body onload="load()" onunload="GUnload()">{% endblock %}
 
-	<body onload="load()" onunload="GUnload()"><div style="margin-top:70px; margin-left:180px;"><p><a href="http://minkoffcodingadventures.com/galleries/">Back to main page </a></div>
-	
-	<div style="margin-left:180px;margin-top:0px; width:50%; float:left"><p style="font-size:32"><strong>{{galleries1990.name}}</a></strong> </p>
-<p style="font-size:18">In 1990, it was located at {{galleries1990.address_number}} {{galleries1990.address_direction}}. {{galleries1990.address_street}} {{galleries1990.address_type}}., and  owned by {{galleries1990.director}}.</p> 
+{% block content %}<div style="margin-left:180px;margin-top:0px; width:50%; float:left"><p style="font-size:32"><strong>{{galleries1990.name}}</a></strong> </p>
+
+<p style="font-size:18">In 1990, it was located at {{galleries1990.address_number}} {{galleries1990.address_direction}}. {{galleries1990.address_street}} {{galleries1990.address_type}}., and owned by {{galleries1990.director}}.</p> 
+
 <p style="font-size:18">{{galleries1990.name}} was founded in {{galleries1990.start_year}} and remained open until {{galleries1990.end_year}}.  Some of the categories it specialized in included:<ul>
 
 	{% ifnotequal galleries1990.painting "n" %}
@@ -189,33 +187,26 @@
 	{% endifnotequal %}
 	</ul>
 	
-	
 	{% ifnotequal galleries1990.outcome "closed" %}
-<br><br>The gallery has {{galleries1990.outcome}} since its inception. 
-{% endifnotequal %}
+     <br><br>The gallery has {{galleries1990.outcome}} since its inception. 
+    {% endifnotequal %}
+    </p> 
 
+{% if galleries1990.notes %}
 
-
-</p> {% if galleries1990.notes %}
-
-<p style="font-size:18">Additional notes:
-	<ul>
-		<li> {{galleries1990.notes}}</li>
+    <p style="font-size:18">Additional notes:
+		<ul>
+			<li> {{galleries1990.notes}}</li>
 		</ul>
-		</p>
-		</body>
-		</html>
+	</p>
 		
-		{% else %}
-		{% endif %}
-			<p><A HREF="javascript:javascript:history.go(-1)">Click here to go back to search results.</A></p></div>
-		
-	
-	<div style="margin-left: 65%; margin-top:42px;">	<img src= "http://maps.google.com/maps/api/staticmap?center={{galleries1990.lat}},{{galleries1990.lan}}&zoom=15&size=400x400&
-		markers=color:red|{{galleries1990.lat}},{{galleries1990.lan}}&sensor=true" /><br><br><small>Location of gallery in 1990.</small>
+	{% else %}
+{% endif %}
 
-</body>
-	</html>
-	
+<p><A HREF="javascript:javascript:history.go(-1)">Click here to go back to search results.</A></p></div>
 		
 	
+<div style="margin-left: 65%; margin-top:42px;">	
+	<img src= "http://maps.google.com/maps/api/staticmap?center={{galleries1990.lat}},{{galleries1990.lan}}&zoom=15&size=400x400&
+markers=color:red|{{galleries1990.lat}},{{galleries1990.lan}}&sensor=true" /><br><br><small>Location of gallery in 1990.</small>
+{% endblock %}

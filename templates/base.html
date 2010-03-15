@@ -1,7 +1,11 @@
 <html>
-<head>
-	<title> {% block title %}Chicago Art Gallery Persistence</title>{% endblock %}
-	
-	<body><div style="margin-top:70px; margin-left:180px;"><p><a href="http://minkoffcodingadventures.com/galleries/">Back to main page </a></div>
-	{% block content %}{% endblock %}
-	</body>
+    <head>
+        <title> {% block title %}{% endblock %}</title>
+    </head>
+    
+    {% block bodytag %}<body>{% endblock %}
+        <div style="margin-top:70px; margin-left:180px;">{% block nav %}<p><a href="/galleries">Back to main page </a></p>{% endblock %}</div>
+            {% block content %}
+            {% endblock %}
+    </body>
+</html>
