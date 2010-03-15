@@ -1,18 +1,17 @@
 from django.conf.urls.defaults import *
-
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    (r'galleries/$', 'galleries.data.views.index'),
-    (r'(?P<id>\d+)/$', 'galleries.data.views.detail'),
-    (r'search_name', 'galleries.data.views.search_name'),
-    (r'search_closed', 'galleries.data.views.search_closed'),
-    (r'search_founded', 'galleries.data.views.search_founded'),
-    (r'search_media', 'galleries.data.views.search_media'),
-    (r'search_neighborhood', 'galleries.data.views.search_neighborhood'),
-    (r'search_outcome', 'galleries.data.views.search_outcome'),
-    (r'search_zipcode', 'galleries.data.views.search_zipcode'),
+urlpatterns = patterns('galleries.data.views',
+    (r'galleries/$', 'index'),
+    (r'(?P<id>\d+)/$', 'detail'),
+    (r'search_name', 'search_name'),
+    (r'search_closed', 'search_closed'),
+    (r'search_founded', 'search_founded'),
+    (r'search_media', 'search_media'),
+    (r'search_neighborhood', 'search_neighborhood'),
+    (r'search_outcome', 'search_outcome'),
+    (r'search_zipcode', 'search_zipcode'),
 
 
 )

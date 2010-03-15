@@ -1,212 +1,212 @@
 {% extends "base.html" %}
-{% block title %}Chicago Art Gallery Persistence:{{galleries1990.name}} {% endblock %}
+{% block title %}Chicago Art Gallery Persistence:{{Gallery1990.name}} {% endblock %}
 
 {% block bodytag %}<body onload="load()" onunload="GUnload()">{% endblock %}
 
-{% block content %}<div style="margin-left:180px;margin-top:0px; width:50%; float:left"><p style="font-size:32"><strong>{{galleries1990.name}}</a></strong> </p>
+{% block content %}<div style="margin-left:180px;margin-top:0px; width:50%; float:left"><p style="font-size:32"><strong>{{Gallery1990.name}}</a></strong> </p>
 
-<p style="font-size:18">In 1990, it was located at {{galleries1990.address_number}} {{galleries1990.address_direction}}. {{galleries1990.address_street}} {{galleries1990.address_type}}., and owned by {{galleries1990.director}}.</p> 
+<p style="font-size:18">In 1990, it was located at {{Gallery1990.address_number}} {{Gallery1990.address_direction}}. {{Gallery1990.address_street}} {{Gallery1990.address_type}}., and owned by {{Gallery1990.director}}.</p> 
 
-<p style="font-size:18">{{galleries1990.name}} was founded in {{galleries1990.start_year}} and remained open until {{galleries1990.end_year}}.  Some of the categories it specialized in included:<ul>
+<p style="font-size:18">{{Gallery1990.name}} was founded in {{Gallery1990.start_year}} and remained open until {{Gallery1990.end_year}}.  Some of the categories it specialized in included:<ul>
 
-	{% ifnotequal galleries1990.painting "n" %}
-	<li> {{galleries1990.painting}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.painting "n" %}
+    <li> {{Gallery1990.painting}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.sculpture "n" %}
-	<li> {{galleries1990.sculpture}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.three_d_construction "n" %}
-	<li> {{galleries1990.three_d_construction}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.sculpture "n" %}
+    <li> {{Gallery1990.sculpture}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.three_d_construction "n" %}
+    <li> {{Gallery1990.three_d_construction}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.ceramics "n" %}
-	<li> {{galleries1990.ceramics}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.glass "n" %}
-	<li> {{galleries1990.glass}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.metal "n" %}
-	<li> {{galleries1990.metal}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.prints "n" %}
-	<li> {{galleries1990.prints}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.photography "n" %}
-	<li> {{galleries1990.photography}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.lithography "n" %}
-	<li> {{galleries1990.lithography}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.drawing "n" %}
-	<li> {{galleries1990.drawing}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.etching "n" %}
-	<li> {{galleries1990.etching}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.jewelry "n" %}
-	<li> {{galleries1990.jewelry}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.serigraphy "n" %}
-	<li> {{galleries1990.serigraphy}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.wearables "n" %}
-	<li> {{galleries1990.wearables}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.monoprints "n" %}
-	<li> {{galleries1990.monoprints}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.accessories "n" %}
-	<li> {{galleries1990.accessories}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.cards "n" %}
-	<li> {{galleries1990.cards}}</li>
-	{% endifnotequal %}
-	
+    {% ifnotequal Gallery1990.ceramics "n" %}
+    <li> {{Gallery1990.ceramics}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.glass "n" %}
+    <li> {{Gallery1990.glass}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.metal "n" %}
+    <li> {{Gallery1990.metal}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.prints "n" %}
+    <li> {{Gallery1990.prints}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.photography "n" %}
+    <li> {{Gallery1990.photography}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.lithography "n" %}
+    <li> {{Gallery1990.lithography}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.drawing "n" %}
+    <li> {{Gallery1990.drawing}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.etching "n" %}
+    <li> {{Gallery1990.etching}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.jewelry "n" %}
+    <li> {{Gallery1990.jewelry}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.serigraphy "n" %}
+    <li> {{Gallery1990.serigraphy}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.wearables "n" %}
+    <li> {{Gallery1990.wearables}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.monoprints "n" %}
+    <li> {{Gallery1990.monoprints}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.accessories "n" %}
+    <li> {{Gallery1990.accessories}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.cards "n" %}
+    <li> {{Gallery1990.cards}}</li>
+    {% endifnotequal %}
+    
 
-	{% ifnotequal galleries1990.pastels "n" %}
-	<li> {{galleries1990.pastels}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.pastels "n" %}
+    <li> {{Gallery1990.pastels}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.furniture "n" %}
-	<li> {{galleries1990.furniture}}</li>
-	{% endifnotequal %}
-		
-	{% ifnotequal galleries1990.folk_art "n" %}
-	<li> {{galleries1990.folk_art}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.furniture "n" %}
+    <li> {{Gallery1990.furniture}}</li>
+    {% endifnotequal %}
+        
+    {% ifnotequal Gallery1990.folk_art "n" %}
+    <li> {{Gallery1990.folk_art}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.graphics "n" %}
-	<li> {{galleries1990.graphics}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.graphics "n" %}
+    <li> {{Gallery1990.graphics}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.fiber "n" %}
-	<li> {{galleries1990.fiber}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.fiber "n" %}
+    <li> {{Gallery1990.fiber}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.handcrafts "n" %}
-	<li> {{galleries1990.handcrafts}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.handcrafts "n" %}
+    <li> {{Gallery1990.handcrafts}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.mixed_media "n" %}
-	<li> {{galleries1990.mixed_media}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.mixed_media "n" %}
+    <li> {{Gallery1990.mixed_media}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.all "n" %}
-	<li> {{galleries1990.all}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.all "n" %}
+    <li> {{Gallery1990.all}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.tapestry "n" %}
-	<li> {{galleries1990.tapestry}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.tapestry "n" %}
+    <li> {{Gallery1990.tapestry}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.clay "n" %}
-	<li> {{galleries1990.clay.strip}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.clay "n" %}
+    <li> {{Gallery1990.clay.strip}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.wood "n" %}
-	<li> {{galleries1990.wood}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.wood "n" %}
+    <li> {{Gallery1990.wood}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.kaleidoscopes "n" %}
-	<li> {{galleries1990.kaleidoscopes}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.kaleidoscopes "n" %}
+    <li> {{Gallery1990.kaleidoscopes}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.silkscreen "n" %}
-	<li> {{galleries1990.silkscreen}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.silkscreen "n" %}
+    <li> {{Gallery1990.silkscreen}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.mobiles "n" %}
-	<li> {{galleries1990.mobiles}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.mobiles "n" %}
+    <li> {{Gallery1990.mobiles}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.assemblage "n" %}
-	<li> {{galleries1990.assemblage}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.assemblage "n" %}
+    <li> {{Gallery1990.assemblage}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.neon "n" %}
-	<li> {{galleries1990.neon}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.neon "n" %}
+    <li> {{Gallery1990.neon}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.collage "n" %}
-	<li> {{galleries1990.collage}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.collage "n" %}
+    <li> {{Gallery1990.collage}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.enamel "n" %}
-	<li> {{galleries1990.enamel}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.enamel "n" %}
+    <li> {{Gallery1990.enamel}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.porcelain "n" %}
-	<li> {{galleries1990.porcelain}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.porcelain "n" %}
+    <li> {{Gallery1990.porcelain}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.books "n" %}
-	<li> {{galleries1990.books}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.books "n" %}
+    <li> {{Gallery1990.books}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.fresco "n" %}
-	<li> {{galleries1990.fresco}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.fresco "n" %}
+    <li> {{Gallery1990.fresco}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.pottery "n" %}
-	<li> {{galleries1990.pottery}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.pottery "n" %}
+    <li> {{Gallery1990.pottery}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.weaving "n" %}
-	<li> {{galleries1990.weaving}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.weaving "n" %}
+    <li> {{Gallery1990.weaving}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.basketry "n" %}
-	<li> {{galleries1990.basketry}}</li>
-	{% endifnotequal %}
+    {% ifnotequal Gallery1990.basketry "n" %}
+    <li> {{Gallery1990.basketry}}</li>
+    {% endifnotequal %}
 
-	{% ifnotequal galleries1990.leather "n" %}
-	<li> {{galleries1990.leather}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.batik "n" %}
-	<li> {{galleries1990.batik}}</li>
-	{% endifnotequal %}
-	
-	{% ifnotequal galleries1990.paper "n" %}
-	<li> {{galleries1990.paper}}</li>
-	{% endifnotequal %}
-	</ul>
-	
-	{% ifnotequal galleries1990.outcome "closed" %}
-     <br><br>The gallery has {{galleries1990.outcome}} since its inception. 
+    {% ifnotequal Gallery1990.leather "n" %}
+    <li> {{Gallery1990.leather}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.batik "n" %}
+    <li> {{Gallery1990.batik}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal Gallery1990.paper "n" %}
+    <li> {{Gallery1990.paper}}</li>
+    {% endifnotequal %}
+    </ul>
+    
+    {% ifnotequal Gallery1990.outcome "closed" %}
+     <br><br>The gallery has {{Gallery1990.outcome}} since its inception. 
     {% endifnotequal %}
     </p> 
 
-{% if galleries1990.notes %}
+{% if Gallery1990.notes %}
 
     <p style="font-size:18">Additional notes:
-		<ul>
-			<li> {{galleries1990.notes}}</li>
-		</ul>
-	</p>
-		
-	{% else %}
+        <ul>
+            <li> {{Gallery1990.notes}}</li>
+        </ul>
+    </p>
+        
+    {% else %}
 {% endif %}
 
 <p><A HREF="javascript:javascript:history.go(-1)">Click here to go back to search results.</A></p></div>
-		
-	
-<div style="margin-left: 65%; margin-top:42px;">	
-	<img src= "http://maps.google.com/maps/api/staticmap?center={{galleries1990.lat}},{{galleries1990.lan}}&zoom=15&size=400x400&
-markers=color:red|{{galleries1990.lat}},{{galleries1990.lan}}&sensor=true" /><br><br><small>Location of gallery in 1990.</small>
+        
+    
+<div style="margin-left: 65%; margin-top:42px;">    
+    <img src= "http://maps.google.com/maps/api/staticmap?center={{Gallery1990.lat}},{{Gallery1990.lan}}&zoom=15&size=400x400&
+markers=color:red|{{Gallery1990.lat}},{{Gallery1990.lan}}&sensor=true" /><br><br><small>Location of gallery in 1990.</small>
 {% endblock %}
