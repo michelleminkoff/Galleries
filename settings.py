@@ -1,10 +1,10 @@
 # Django settings for galleries project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    # ('Michelle Minkoff', 'meminkoff@gmail.com'),
 )
 
 MANAGERS = ADMINS
