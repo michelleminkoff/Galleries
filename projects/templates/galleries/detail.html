@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% block title %}Chicago Art Gallery Persistence: {{gallery.name}} {% endblock %}
+
+{% block bodytag %}<body onload="load()" onunload="GUnload()">{% endblock %}
+
+{% block content %}<div style="margin-left:180px;margin-top:0px; width:50%; float:left"><p style="font-size:32"><strong>{{gallery.name}}</a></strong> </p>
+
+<p style="font-size:18">In 1990, it was located at {{gallery.address_number}} {{gallery.address_direction}}. {{gallery.address_street}} {{gallery.address_type}}., and owned by {{gallery.director}}.</p> 
+
+<p style="font-size:18">{{gallery.name}} was founded in {{gallery.start_year}} and remained open until {{gallery.end_year}}.  Some of the categories it specialized in included:<ul>
+
+    {% ifnotequal gallery.painting "n" %}
+    <li> {{gallery.painting}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.sculpture "n" %}
+    <li> {{gallery.sculpture}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.three_d_construction "n" %}
+    <li> {{gallery.three_d_construction}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.ceramics "n" %}
+    <li> {{gallery.ceramics}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.glass "n" %}
+    <li> {{gallery.glass}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.metal "n" %}
+    <li> {{gallery.metal}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.prints "n" %}
+    <li> {{gallery.prints}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.photography "n" %}
+    <li> {{gallery.photography}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.lithography "n" %}
+    <li> {{gallery.lithography}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.drawing "n" %}
+    <li> {{gallery.drawing}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.etching "n" %}
+    <li> {{gallery.etching}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.jewelry "n" %}
+    <li> {{gallery.jewelry}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.serigraphy "n" %}
+    <li> {{gallery.serigraphy}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.wearables "n" %}
+    <li> {{gallery.wearables}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.monoprints "n" %}
+    <li> {{gallery.monoprints}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.accessories "n" %}
+    <li> {{gallery.accessories}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.cards "n" %}
+    <li> {{gallery.cards}}</li>
+    {% endifnotequal %}
+    
+
+    {% ifnotequal gallery.pastels "n" %}
+    <li> {{gallery.pastels}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.furniture "n" %}
+    <li> {{gallery.furniture}}</li>
+    {% endifnotequal %}
+        
+    {% ifnotequal gallery.folk_art "n" %}
+    <li> {{gallery.folk_art}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.graphics "n" %}
+    <li> {{gallery.graphics}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.fiber "n" %}
+    <li> {{gallery.fiber}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.handcrafts "n" %}
+    <li> {{gallery.handcrafts}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.mixed_media "n" %}
+    <li> {{gallery.mixed_media}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.all "n" %}
+    <li> {{gallery.all}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.tapestry "n" %}
+    <li> {{gallery.tapestry}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.clay "n" %}
+    <li> {{gallery.clay.strip}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.wood "n" %}
+    <li> {{gallery.wood}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.kaleidoscopes "n" %}
+    <li> {{gallery.kaleidoscopes}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.silkscreen "n" %}
+    <li> {{gallery.silkscreen}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.mobiles "n" %}
+    <li> {{gallery.mobiles}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.assemblage "n" %}
+    <li> {{gallery.assemblage}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.neon "n" %}
+    <li> {{gallery.neon}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.collage "n" %}
+    <li> {{gallery.collage}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.enamel "n" %}
+    <li> {{gallery.enamel}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.porcelain "n" %}
+    <li> {{gallery.porcelain}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.books "n" %}
+    <li> {{gallery.books}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.fresco "n" %}
+    <li> {{gallery.fresco}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.pottery "n" %}
+    <li> {{gallery.pottery}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.weaving "n" %}
+    <li> {{gallery.weaving}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.basketry "n" %}
+    <li> {{gallery.basketry}}</li>
+    {% endifnotequal %}
+
+    {% ifnotequal gallery.leather "n" %}
+    <li> {{gallery.leather}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.batik "n" %}
+    <li> {{gallery.batik}}</li>
+    {% endifnotequal %}
+    
+    {% ifnotequal gallery.paper "n" %}
+    <li> {{gallery.paper}}</li>
+    {% endifnotequal %}
+    </ul>
+    
+    {% ifnotequal gallery.outcome "closed" %}
+     The gallery has {{gallery.outcome}} since its inception. 
+    {% endifnotequal %}
+    </p> 
+
+{% if gallery.notes %}
+
+    <p style="font-size:18">Additional notes:
+        <ul>
+            <li> {{gallery.notes}}</li>
+        </ul>
+    </p>
+        
+    {% else %}
+{% endif %}
+
+<p><A HREF="javascript:javascript:history.go(-1)">Click here to go back to search results.</A></p></div>
+        
+    
+<div style="margin-left: 65%; margin-top:42px;">    
+    <img src= "http://maps.google.com/maps/api/staticmap?center={{gallery.lat}},{{gallery.lan}}&zoom=15&size=400x400&
+markers=color:red|{{gallery.lat}},{{gallery.lan}}&sensor=true" /><br><br><small>Location of gallery in 1990.</small>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Chicago Art Gallery Persistence: {{neighborhood|capfirst}}{% endblock %}
+
+    {% block content %}
+
+<div style="margin-top:40px; margin-left:180px;"><h2>{{neighborhood|capfirst}} Galleries</h2>
+
+{% if search_results %}
+
+    <ol>
+    {% for Galleries1990 in search_results %}
+    <li><a href="/{{Galleries1990.rowid}}/">{{Galleries1990.name}}</a></li>
+    {% endfor %}
+    </ol>
+ <br>
+    <p>Search again or <a href="/galleries/">return to the main page</a>.</p>
+        <form method='post' action='search_neighborhood/'>    <label for="neighborhood"><strong>Neighborhood, in 1990:</strong></label>
+
+        <select name="neighborhood">
+        <option value="">None selected</option>
+        <option value="loop">Loop</option>
+        <option value="north">North</option>
+        <option value="northwest">Northwest</option>
+        <option value="river north">River North</option>
+        <option value="south">South</option>
+        <option value="west">West</option>
+        </select><input type='submit' value="Search by neighborhood" name='search'></form><br>
+    
+{% else %}
+    <p>Sorry, no results available. Search or <a href="/galleries/">go back to the home page</a>.</p>
+        <form method='post' action='search_neighborhood/'>    <label for="neighborhood"><strong>Neighborhood, in 1990:</strong></label>
+
+        <select name="neighborhood">
+        <option value="">None selected</option>
+        <option value="loop">Loop</option>
+        <option value="north">North</option>
+        <option value="northwest">Northwest</option>
+        <option value="river north">River North</option>
+        <option value="south">South</option>
+        <option value="west">West</option>
+        </select><input type='submit' value="Search by neighborhood" name='search'></form><br>
+{% endif %}
+{% endblock %}
