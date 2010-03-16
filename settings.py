@@ -1,6 +1,6 @@
 # Django settings for galleries project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -10,7 +10,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'home/minkoff/webapps/djangog2/galleries/galleries.sqlite'             # Or path to database file if using sqlite3.
+DATABASE_NAME = 'home/minkoff/webapps/djangog2/projects/galleries.sqlite'             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -63,9 +63,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'galleries.urls'
+ROOT_URLCONF = 'projects.urls'
 
-TEMPLATE_DIRS = ('home/minkoff/webapps/djangog2/galleries/templates'
+TEMPLATE_DIRS = ('home/minkoff/webapps/djangog2/projects/templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -77,5 +77,5 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-	'galleries.data'
+	'projects.galleries'
 )

@@ -2,7 +2,7 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('galleries.data.views',
+urlpatterns = patterns('projects.galleries.views',
     (r'galleries/$', 'index'),
     (r'(?P<id>\d+)/$', 'detail'),
     (r'search_name', 'search_name'),

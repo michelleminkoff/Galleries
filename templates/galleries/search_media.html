@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}Chicago Art Gallery Persistence: Galleries that specialized in certain categories{% endblock %}
+
+    {% block content %}
+
+<div style="margin-top:40px; margin-left:180px;"><h2>Galleries that specialized in categories you selected</h2>
+
+{% if search_results %}
+
+    <ol>
+    {% for Gallery1990 in search_results %}
+    <li><a href="/{{Galleries1990.rowid}}/">{{Gallery1990.name}}</a></li>
+    {% endfor %}
+    </ol>
+ <br>
+    <p>Search again or <a href="/galleries/">return to the main page</a>.</p>
+    <form method='post' action='search_media/'><label for="media"><strong>In 1990, gallery focused on art in these categories:</strong><br>(hold down shift while clicking to select more than one option)</label><br><br>
+
+    <SELECT NAME="media" multiple="multiple" SIZE=5>
+        <OPTION VALUE="three_d_construction">3-D construction
+        <OPTION VALUE="accessories">Accessories
+        <OPTION VALUE="all">All
+        <OPTION VALUE="assemblage">Assemblage
+        <OPTION VALUE="basketry">Basketry
+        <OPTION VALUE="batik">Batik
+        <OPTION VALUE="books">Books
+        <OPTION VALUE="cards">Cards
+        <OPTION VALUE="ceramics">Ceramics
+        <OPTION VALUE="clay">Clay
+        <OPTION VALUE="collage">Collage
+        <OPTION VALUE="drawing">Drawing
+        <OPTION VALUE="enamel">Enamel
+        <OPTION VALUE="etching">Etching
+        <OPTION VALUE="fiber">Fiber
+        <OPTION VALUE="folk art">Folk Art
+        <OPTION VALUE="fresco">Fresco
+        <OPTION VALUE="furniture">Furniture
+        <OPTION VALUE="glass">Glass
+        <OPTION VALUE="graphics">Graphics
+        <OPTION VALUE="handcrafts">Handcrafts
+        <OPTION VALUE="jewelry">Jewelry
+        <OPTION VALUE="kaleidoscopes">Kaleidoscopes
+        <OPTION VALUE="leather">Leather
+        <OPTION VALUE="lithography">Lithography
+        <OPTION VALUE="metal">Metal
+        <OPTION VALUE="mixed media">Mixed Media
+        <OPTION VALUE="mobiles">Mobiles
+        <OPTION VALUE="monoprints">Monoprints
+        <OPTION VALUE="neon">Neon
+        <OPTION VALUE="painting">Painting
+        <OPTION VALUE="paper">Paper
+        <OPTION VALUE="pastels">Pastels
+        <OPTION VALUE="photography">Photography
+        <OPTION VALUE="porcelain">Porcelain
+        <OPTION VALUE="pottery">Pottery
+        <OPTION VALUE="prints">Prints
+        <OPTION VALUE="sculpture">Sculpture
+        <OPTION VALUE="serigraphy">Serigraphy
+        <OPTION VALUE="silkscreen">Silkscreen
+        <OPTION VALUE="tapestry">Tapestry
+        <OPTION VALUE="wearables">Wearables
+        <OPTION VALUE="weaving">Weaving
+        <OPTION VALUE="wood">Wood
+        </SELECT>
+    <input type='submit' value="Search by category"name='search'></form>
+    
+{% else %}
+    <p>Sorry, no results available. Search or <a href="/galleries/">go back to the home page</a>.</p>
+    <form method='post' action='search_media/'><label for="media"><strong>In 1990, gallery focused on art in these categories:</strong><br>(hold down shift while clicking to select more than one option)</label><br><br>
+
+    <SELECT NAME="media" multiple="multiple" SIZE=5>
+        <OPTION VALUE="three_d_construction">3-D construction
+        <OPTION VALUE="accessories">Accessories
+        <OPTION VALUE="all">All
+        <OPTION VALUE="assemblage">Assemblage
+        <OPTION VALUE="basketry">Basketry
+        <OPTION VALUE="batik">Batik
+        <OPTION VALUE="books">Books
+        <OPTION VALUE="cards">Cards
+        <OPTION VALUE="ceramics">Ceramics
+        <OPTION VALUE="clay">Clay
+        <OPTION VALUE="collage">Collage
+        <OPTION VALUE="drawing">Drawing
+        <OPTION VALUE="enamel">Enamel
+        <OPTION VALUE="etching">Etching
+        <OPTION VALUE="fiber">Fiber
+        <OPTION VALUE="folk art">Folk Art
+        <OPTION VALUE="fresco">Fresco
+        <OPTION VALUE="furniture">Furniture
+        <OPTION VALUE="glass">Glass
+        <OPTION VALUE="graphics">Graphics
+        <OPTION VALUE="handcrafts">Handcrafts
+        <OPTION VALUE="jewelry">Jewelry
+        <OPTION VALUE="kaleidoscopes">Kaleidoscopes
+        <OPTION VALUE="leather">Leather
+        <OPTION VALUE="lithography">Lithography
+        <OPTION VALUE="metal">Metal
+        <OPTION VALUE="mixed media">Mixed Media
+        <OPTION VALUE="mobiles">Mobiles
+        <OPTION VALUE="monoprints">Monoprints
+        <OPTION VALUE="neon">Neon
+        <OPTION VALUE="painting">Painting
+        <OPTION VALUE="paper">Paper
+        <OPTION VALUE="pastels">Pastels
+        <OPTION VALUE="photography">Photography
+        <OPTION VALUE="porcelain">Porcelain
+        <OPTION VALUE="pottery">Pottery
+        <OPTION VALUE="prints">Prints
+        <OPTION VALUE="sculpture">Sculpture
+        <OPTION VALUE="serigraphy">Serigraphy
+        <OPTION VALUE="silkscreen">Silkscreen
+        <OPTION VALUE="tapestry">Tapestry
+        <OPTION VALUE="wearables">Wearables
+        <OPTION VALUE="weaving">Weaving
+        <OPTION VALUE="wood">Wood
+        </SELECT>
+    <input type='submit' value="Search by category"name='search'></form>
+{% endif %}
+{% endblock %}
